@@ -1,0 +1,15 @@
+#formCadastroProduto{
+    padding: 5px;
+}
+
+.inputBox{
+    margin-top: 5px;
+}
+
+.inputBox > label{
+    margin-right: 15px;
+}
+
+.buttonBox{
+    margin-top: 5px;
+}

@@ -1,0 +1,27 @@
+<header>
+    <nav id="navbarBox">
+      <ul id="navbar">
+        <li><a href="#" class="logo">Nome Loja</a></li>
+        <li>
+          <form class="search-form" role="search">
+            <label for="search" class="visually-hidden"></label>
+            <input type="search" id="search" name="search" placeholder="Buscar..." />
+          </form>
+        </li>
+        <li><a href="#desejos">Lista de Desejos</a></li>
+        <li><a href="#entrar">Entrar</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
+      </ul>
+    </nav>
+    <section id="dropdownBox">
+      <div id="dropdown">
+        <div id="dropdownDiv">
+          <button>Todas as Categorias</button>
+          <div id="dropdown-content" *ngFor="let categoria of categoriaList">
+            <a href="/{{categoria}}">{{categoria}}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+</header>
+  

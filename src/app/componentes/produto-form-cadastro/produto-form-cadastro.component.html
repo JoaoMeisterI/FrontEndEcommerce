@@ -1,0 +1,50 @@
+<h1>Cadastro de Produto</h1>
+<form *ngIf="produtoForm" [formGroup]="produtoForm" (ngSubmit)="enviar()" #formDit="ngForm" id="formCadastroProduto">
+  
+  <input type="hidden" formControlName="id">
+  
+  <div class="inputBox">
+    <label>Cor</label>
+    <input type="text" formControlName="cor" value={{produtoDados?.cor}}>
+  </div>
+
+  <div class="inputBox">
+    <label>Valor Pago Produto</label>
+    <input type="number" formControlName="precoPago" value="{{produtoDados?.precoPago}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Valor Venda Produto</label>
+    <input type="number" formControlName="precoVenda" value="{{produtoDados?.precoVenda}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Tamanho</label>
+    <input type="text" formControlName="tamanho" value={{produtoDados?.tamanho}}>
+  </div>
+
+  <div class="inputBox">
+    <label>Quantidade Estoque</label>
+    <input type="number" formControlName="quantidadeEstoque" value={{produtoDados?.quantidadeEstoque}}>
+  </div>
+
+  <div class="inputBox">
+    <label>Imagem</label>
+    <input type="file" formControlName="imagem" value="">
+  </div>
+
+  <div class="inputBox">
+    <label>Categoria Produto</label>
+    <input type="text" formControlName="categoriaProduto" value={{produtoDados?.categoriaProduto}}>
+  </div>
+
+  <div class="inputBox">
+    <label>Condição Produto</label>
+    <input type="text" formControlName="condicaoProduto" value="{{produtoDados?.condicaoProduto}}">
+  </div>
+
+  <div class="buttonBox">
+    <button type="submit" [disabled]="!produtoForm.valid">Cadastrar</button>
+    <button>Voltar</button>
+  </div>
+</form>

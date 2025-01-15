@@ -1,0 +1,16 @@
+.boxBlocoDemonstrativo{
+    border: 5px solid rgb(14, 216, 189);
+    margin: 10px;
+    padding: 20px;
+}
+
+#categoria{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#blocoDemonstrativo{
+    display: flex;
+    justify-content: space-around;
+}
