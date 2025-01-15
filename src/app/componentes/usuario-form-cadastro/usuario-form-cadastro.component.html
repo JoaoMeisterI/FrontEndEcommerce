@@ -1,0 +1,45 @@
+<h1>Cadastro de Usuário</h1>
+<form *ngIf="usuarioForm" [formGroup]="usuarioForm" (ngSubmit)="enviar()" #formDit="ngForm" id="formCadastroUsuario">
+  
+  <input type="hidden" formControlName="id">
+
+  <div class="inputBox">
+    <label>Nome Completo</label>
+    <input type="text" formControlName="nomeCompleto" value="{{usuarioDados?.nomeCompleto}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Usuário</label>
+    <input type="text" formControlName="user" value="{{usuarioDados?.user}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Senha</label>
+    <input type="password" formControlName="senha" value="{{usuarioDados?.senha}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Telefone</label>
+    <input type="tel" formControlName="telefone" value="{{usuarioDados?.telefone}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Endereço</label>
+    <input type="text" formControlName="endereco" value="{{usuarioDados?.endereco}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Metodo de Pagamento</label>
+    <input type="text" formControlName="metodoPagamento" value="{{usuarioDados?.metodoPagamento}}">
+  </div>
+
+  <div class="inputBox">
+    <label>Tipo de Usuário</label>
+    <input type="text" formControlName="tipoUser" value="{{usuarioDados?.tipoUser}}">
+  </div>
+
+  <div class="buttonBox">
+    <button type="submit" [disabled]="!usuarioForm.valid">Cadastrar</button>
+    <button type="button" (click)="voltar()">Voltar</button>
+  </div>
+</form>
