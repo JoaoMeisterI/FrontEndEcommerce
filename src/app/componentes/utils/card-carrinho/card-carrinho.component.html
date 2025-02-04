@@ -1,0 +1,22 @@
+<div class="col-12 col-md-12 meuCarrinho shadow p-3 mb-5 bg-body-secondary rounded ">
+    <div class="row containerFilho">
+        <div class="col-12 col-md-3 imgContainer">
+            <img src="assets/imgs/tenisTesteCard.png" class="w-100 h-100" alt="">
+        </div>
+        <div class="col-11 col-md-6  descContainer">
+                <h3>Air Force One</h3>
+                <p>Cor: Branco</p>
+                <p>Tamanho: 42</p>
+        </div>
+        <div class="col-12 col-md-3 buttonContainer">
+            <button class="btn btn-danger">Remover</button>
+        </div>
+        <div class="col-12 col-md-12 infoTotalContainer">
+            <p>Quantidade :</p>
+            <button class="btn btn-primary" (click)="removeContador()">-</button>
+            <p>{{contador}}</p>
+            <button class="btn btn-warning" (click)="addContador()">+</button>
+            <p>Total:</p>
+        </div>
+    </div>
+</div>

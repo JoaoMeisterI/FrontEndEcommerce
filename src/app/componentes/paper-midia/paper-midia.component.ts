@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-paper-midia',
+  selector: 'paper-midia',
   standalone: true,
   imports: [],
   templateUrl: './paper-midia.component.html',

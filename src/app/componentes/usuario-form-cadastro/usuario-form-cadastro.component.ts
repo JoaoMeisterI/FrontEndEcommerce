@@ -72,7 +72,5 @@ export class UsuarioFormCadastroComponent implements OnInit {
     });
   }
 
-  voltar(): void {
-    this.router.navigate(['/usuarios']); // Navega de volta para a lista de usuários
-  }
+ 
 }

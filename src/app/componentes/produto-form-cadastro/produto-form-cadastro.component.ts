@@ -79,7 +79,11 @@ export class ProdutoFormCadastroComponent implements OnInit {
       precoVenda: new FormControl(this.produtoDados ? this.produtoDados.precoVenda : '', [Validators.required]),
       tamanho: new FormControl(this.produtoDados ? this.produtoDados.tamanho : '', [Validators.required]),
       quantidadeEstoque: new FormControl(this.produtoDados ? this.produtoDados.quantidadeEstoque : '', [Validators.required]),
-      imagem: new FormControl(this.produtoDados ? this.produtoDados.imagem : ''),
+       imagem: new FormControl(
+        this.produtoDados && this.produtoDados.imagem && this.produtoDados.imagem.length > 0 
+        ? this.produtoDados.imagem 
+        : new Uint8Array() // Valor padrão caso a imagem esteja vazia ou não exista
+      ),
       categoriaProduto: new FormControl(this.produtoDados ? this.produtoDados.categoriaProduto : '', [Validators.required]),
       condicaoProduto: new FormControl(this.produtoDados ? this.produtoDados.condicaoProduto : '', [Validators.required]),
     });

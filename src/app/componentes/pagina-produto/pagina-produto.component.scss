@@ -1,0 +1,48 @@
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+img{
+    margin: 0 auto;
+}
+
+h2{
+    font-weight: bolder;
+}
+
+
+
+
+
+.containerDescricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(197, 95, 95, 0.745);
+}
+
+.containerDetalhamento{
+    
+    margin-bottom: 20px;
+    
+
+    .col-12{
+
+        p{
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+}
+
+
+.containerInfoPreco{
+    background-color: rgba(197, 95, 95, 0.745);
+}
+
+.containerDescAdd{
+    
+}
+

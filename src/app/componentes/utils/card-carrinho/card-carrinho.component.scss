@@ -1,0 +1,27 @@
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+.infoTotalContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+    min-height: 40px;
+
+    p {
+        margin: 0;
+        line-height: 40px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0;
+    }
+
+}
+
