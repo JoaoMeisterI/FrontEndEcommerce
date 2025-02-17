@@ -20,9 +20,7 @@ export class HeaderComponent  implements OnInit{
 
   ngOnInit(): void {
 
-      this.produtoService.GetCategoriasProduto().subscribe(data =>{
-        this.categoriaList = data.dados
-      })
+ 
   }
     
 }

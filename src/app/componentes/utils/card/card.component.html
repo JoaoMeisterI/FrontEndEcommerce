@@ -1,12 +1,9 @@
 <div class="card">
-    <img
-      src="assets/imgs/tenisTesteCard.png"
-      class="img-fluid"
-      alt="fotoHome"
-    />
+  <img [src]="'data:image/png;base64,' + base64Imagem" class="img-fluid" alt="Imagem" />
     <div class="card-body">
-      <h5 class="card-title">Air Force One</h5>
-      <p class="card-text">Valor:</p>
-      <p class="card-text">Até:</p>
+      <h5 class="card-title"><a [routerLink]="['/produto/detalhamento',produto.id]">{{nomeProduto}}</a></h5>
+      <p class="card-text">Valor Produto: {{valorProduto}} R$</p>
+      <p class="card-text">Até {{qtdParcelas}}</p>
     </div>
+    <app-dropdown></app-dropdown>
 </div>

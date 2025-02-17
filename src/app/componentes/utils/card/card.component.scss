@@ -50,3 +50,17 @@ $dark: #212529; // Escuro
   padding-top: 2rem;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+  background-color: red;
+  border-radius: 50px;
+  display: block;
+
+}
+
+a:hover{
+  color: #f8f9fa;
+}
+
+

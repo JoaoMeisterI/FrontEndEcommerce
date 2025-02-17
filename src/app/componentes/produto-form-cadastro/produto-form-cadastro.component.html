@@ -4,6 +4,11 @@
   <input type="hidden" formControlName="id">
   
   <div class="inputBox">
+    <label>Nome Produto</label> 
+    <input type="text" formControlName="descricaoProduto" value={{produtoDados?.descricaoProduto}}>
+  </div>
+
+  <div class="inputBox">
     <label>Cor</label>
     <input type="text" formControlName="cor" value={{produtoDados?.cor}}>
   </div>
@@ -35,12 +40,20 @@
 
   <div class="inputBox">
     <label>Categoria Produto</label>
-    <input type="text" formControlName="categoriaProduto" value={{produtoDados?.categoriaProduto}}>
+    <select formControlName="categoriaProduto" value={{produtoDados?.categoriaProduto}}>
+      <option value="Tênis">Tênis</option>
+      <option value="Roupa">Roupa</option>
+      <option value="Acessórios">Acessórios</option>
+    </select>
   </div>
 
   <div class="inputBox">
     <label>Condição Produto</label>
-    <input type="text" formControlName="condicaoProduto" value="{{produtoDados?.condicaoProduto}}">
+    <select formControlName="condicaoProduto" value="{{produtoDados?.condicaoProduto}}">
+      <option value="Lançamento">Lançamento</option>
+      <option value="Padrão">Padrão</option>
+      <option value="Novo">Novo</option>
+    </select>
   </div>
 
   <div class="buttonBox">

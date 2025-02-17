@@ -1,9 +1,13 @@
 
 *{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.dropdown
-{
-  margin-bottom: 10px;
+
+button{
+  margin-top: 5px;
+}
+
+.dropdown{
+  background: linear-gradient(180deg, #e0e0e0, #d6d6d6, #cccccc, #c2c2c2, #b8b8b8, #aeaeae);
 }

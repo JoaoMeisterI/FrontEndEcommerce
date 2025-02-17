@@ -5,7 +5,8 @@ import { CadastroUsuarioComponent } from './pages/usuarioPages/cadastro/cadastro
 import { EditarProdutoComponent } from './pages/produtoPages/editar/editar-produto.component';
 import { EditarUsuarioComponent } from './pages/usuarioPages/editar/editar-usuario.component';
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
-import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
+import { ProdutosCategoriaComponent } from './pages/produtos-categoria/produtos-categoria.component';
+import { ProdutosPaginaProdutoComponent } from './pages/produtos-pagina-produto/produtos-pagina-produto.component';
 
 export const routes: Routes = [
     {path:'',component:HomeComponent},
@@ -14,5 +15,7 @@ export const routes: Routes = [
     {path:'cadastro/usuario',component:CadastroUsuarioComponent},
     {path:'editar/usuario/:id',component:EditarUsuarioComponent},
     {path:'usuario/carrinho',component:CarrinhoComponent},
-    {path:'usuario/favoritos',component:FavoritosComponent},
+    {path:'usuario/favoritos/:categoria',component:ProdutosCategoriaComponent},
+    {path:'produto/categoria/:categoria',component:ProdutosCategoriaComponent},
+    {path:'produto/detalhamento/:id',component:ProdutosPaginaProdutoComponent},
 ];
