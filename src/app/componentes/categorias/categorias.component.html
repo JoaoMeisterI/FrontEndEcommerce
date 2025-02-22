@@ -1,6 +1,8 @@
 <h1 id="titlePrincipal">{{TitlePage}}</h1>
-
 <section class="container" *ngIf="produtos">
+  <div class="filtros mb-5">
+    <button class="btn btn-dark" (click)="openModalFiltros()">Filtros</button>
+  </div>
   <div class="row">
     <div class="col-12 col-md-4 baseCard"  *ngFor="let produto of produtos">
       <app-card [produto]="produto"></app-card>
