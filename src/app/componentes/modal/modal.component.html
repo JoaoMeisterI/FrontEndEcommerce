@@ -1,9 +1,30 @@
+<h2>Filtros Produto</h2>
 <form [formGroup]="formModalFiltro" class="row">
-  <h4>Numeros Disponíveis</h4>
-    <div class="numeracoes col-10">
-      <mat-checkbox >41</mat-checkbox>
-      <mat-checkbox >42</mat-checkbox>
-      <mat-checkbox >45</mat-checkbox>
-      <mat-checkbox >41</mat-checkbox>
-    </div>
+  <mat-form-field appearance="outline" class="col-12 col-md-6">
+    <mat-label>Tamanho</mat-label>
+    <mat-select formControlName="numerosSelecionados" multiple>
+      <mat-option *ngFor="let numero of data.tamanhos" [value]="numero">
+        {{numero}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="col-12 col-md-6">
+    <mat-label>Cores</mat-label>
+    <mat-select formControlName="coresSelecionadas" multiple>
+      <mat-option *ngFor="let cor of data.cores" [value]="cor">
+        {{cor}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="col-12 col-md-6">
+    <mat-label>Tipo Produto</mat-label>
+    <mat-select formControlName="tiposSelecionadas" multiple>
+      <mat-option *ngFor="let tipo of data.tipos" [value]="tipo">
+        {{tipo}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="row">
+    <button mat-raised-button color="accent" class="col-md-4 col-6" (click)="PassaFiltros()">Filtrar</button>
+  </div>
 </form>

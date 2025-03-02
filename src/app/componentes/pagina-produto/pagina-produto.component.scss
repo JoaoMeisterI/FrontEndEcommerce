@@ -3,9 +3,19 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#carouselProduto
+{
 
-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
     margin: 0 auto;
+    width: 350px;
+    height: 200px;
+}
+
 }
 
 h2{

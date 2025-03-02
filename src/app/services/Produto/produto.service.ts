@@ -8,39 +8,39 @@ import { Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutoService 
+export class ProdutoService
 {
 
   private apiUrl = `${environment.ApiUrl}Produto`
 
   constructor(private http:HttpClient) {}
 
-  GetProdutosAll(): Observable<Response<Produto[]>> 
+  GetProdutosAll(): Observable<Response<Produto[]>>
   {
     return this.http.get<Response<Produto[]>>(this.apiUrl);
   }
 
-  GetCategoriasProduto(): Observable<Response<string[]>> 
+  GetCategoriasProduto(): Observable<Response<string[]>>
   {
     return this.http.get<Response<string[]>>(`${this.apiUrl}/categorias`);
   }
 
-  GetProdutoByCategoria(categoria:string): Observable<Response<Produto[]>> 
+  GetProdutoByCategoria(categoria:string): Observable<Response<Produto[]>>
   {
-    return this.http.get<Response<Produto[]>>(`${this.apiUrl}/categorias/${categoria}`);
+    return this.http.get<Response<Produto[]>>(`${this.apiUrl}/produto/${categoria}`);
   }
-  
+
   GetProdutoById(id:number) : Observable<Response<Produto>>
   {
     return this.http.get<Response<Produto>>(`${this.apiUrl}/${id}`);
   }
 
-  CreateProduto(produto : Produto) : Observable<Response<Produto[]>> 
+  CreateProduto(produto : Produto) : Observable<Response<Produto[]>>
   {
     return this.http.post<Response<Produto[]>>(`${this.apiUrl}`,produto);
   }
 
-  UpdateProduto(produto : Produto) : Observable<Response<Produto[]>> 
+  UpdateProduto(produto : Produto) : Observable<Response<Produto[]>>
   {
     return this.http.put<Response<Produto[]>>(`${this.apiUrl}`, produto);
   }
