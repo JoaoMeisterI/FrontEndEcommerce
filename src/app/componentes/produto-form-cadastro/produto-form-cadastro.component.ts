@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    
+
   ],
   templateUrl: './produto-form-cadastro.component.html',
   styleUrl: './produto-form-cadastro.component.css'
@@ -42,13 +42,10 @@ export class ProdutoFormCadastroComponent implements OnInit {
     {
         await this.carregaInformacoesProduto(idProduto)
     }
-    
-    console.log("2 ")
-    console.log(this.produtoDados)
 
    this.initForm();
   }
-  
+
   enviar()
   {
     if (this.produtoForm.valid) {
@@ -59,13 +56,13 @@ export class ProdutoFormCadastroComponent implements OnInit {
   }
 
   async carregaInformacoesProduto(idProduto: number): Promise<void> {
-    try 
+    try
     {
       const data = await firstValueFrom(this.produtoService.GetProdutoById(idProduto));
       this.produtoDados = data.dados;;
       console.log(1)
-    } 
-    catch (error) 
+    }
+    catch (error)
     {
       console.error('Erro ao carregar produto:', error);
     }
@@ -81,9 +78,9 @@ export class ProdutoFormCadastroComponent implements OnInit {
       tamanho: new FormControl(this.produtoDados ? this.produtoDados.tamanho : '', [Validators.required]),
       quantidadeEstoque: new FormControl(this.produtoDados ? this.produtoDados.quantidadeEstoque : '', [Validators.required]),
        imagem: new FormControl(
-        this.produtoDados && this.produtoDados.imagem && this.produtoDados.imagem.length > 0 
-        ? this.produtoDados.imagem 
-        : new Uint8Array() // Valor padrão caso a imagem esteja vazia ou não exista
+        this.produtoDados && this.produtoDados.imagem && this.produtoDados.imagem.length > 0
+        ? this.produtoDados.imagem
+        : new Uint8Array()
       ),
       categoriaProduto: new FormControl(this.produtoDados ? this.produtoDados.categoriaProduto : '', [Validators.required]),
       condicaoProduto: new FormControl(this.produtoDados ? this.produtoDados.condicaoProduto : '', [Validators.required]),

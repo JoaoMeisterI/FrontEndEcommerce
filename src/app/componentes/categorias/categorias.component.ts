@@ -14,11 +14,12 @@ import { firstValueFrom } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'categorias-app',
   standalone: true,
-  imports: [CardComponent, CommonModule, ModalComponent, MatDialogModule],
+  imports: [CardComponent, CommonModule, ModalComponent, MatDialogModule, HeaderComponent],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.scss',
 })
